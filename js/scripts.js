@@ -1,42 +1,41 @@
 //business
-function Pizza(Name,crust,sauce,toppings,Size) {
+function Pizza(crust,sauce,toppings,Size) {
   this.Size = Size;
   this.crust = crust;
   this.sauce = sauce;
   this.toppings = toppings;
-  this.Name = Name;
 }
 
-Pizza.prototype.Price = function() {
+Pizza.prototype.Order = function() {
   if (this.Size === "Personal"){
-    return this.Name + " " + this.toppings + " " + "$3.00";
+    return this.Size + " " + this.toppings + " " + "$3.00";
   }
   if (this.Size === "Small"){
-    return this.Name + " " + this.toppings + " " + "$5.00";
+    return this.Size + " " + this.toppings + " " + "$5.00";
   }
   if (this.Size === "Medium"){
-    return this.Name + " " + this.toppings + " " + "$7.00";
+    return this.Size + " " + this.toppings + " " + "$7.00";
   }
   if (this.Size === "Large"){
-    return this.Name + " " + this.toppings + " " + "$10.00";
+    return this.Size + " " + this.toppings + " " + "$10.00";
   }
 }
 
 
 //user
-var userCrust = $("#Crust").val();
-var userSauce = $("#Sauce").val();
-var userToppings = $("#Top").val();
-var userSize = $("#Size").val();
-var userName = $("#Size").val();
+var userCrust = 0;
+var userSauce = 0;
+var userToppings = 0;
+var userSize = 0;
+var userName = 0;
 
 
 $("#makePizza").submit(function(event){
+  event.preventDefault();
   var userCrust = $("#Crust").val();
   var userSauce = $("#Sauce").val();
   var userToppings = $("#Top").val();
   var userSize = $("#Size").val();
-  event.preventDefault();
-  var newPizza = new Pizza(userName,userCrust,userSauce,userToppings,userSize);
-  $("#pizzaOutput").append("<li>" + newPizza.Price() + "</li>");
+  var newPizza = new Pizza(userCrust,userSauce,userToppings,userSize);
+  $("#pizzaOutput").append("<li>" + newPizza.Order() + "</li>");
 });
