@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <meta charset="utf-8">
+    <title>Pretty Good Pizza</title>
+  </head>
+  <body>
+
+    <h1 align = "center" class = "jumbotron">Pretty Good Pizza</h1>
+    <h2>Make a Pizza!<h2>
+    <hr>
+
+    <h3>Pick Your Size:</h3>
+    <select class="form-control" id="Size">
+    <option>Personal</option>
+    <option>Small</option>
+    <option>Medium</option>
+    <option>Large</option>
+    </select>
+
+    <form id="makePizza">
+      <h3>Pick Your Crust:</h3>
+      <select class="form-control" id="Crust">
+      <option>Stuffed</option>
+      <option>Thin</option>
+      <option>Thick</option>
+      </select>
+
+      <h3>Pick Your Sauce:</h3>
+      <select class="form-control" id="Sauce">
+      <option>Tomato</option>
+      <option>BBQ</option>
+      <option>Ranch and Garlic</option>
+      <option>Garlic and Oil</option>
+      </select>
+
+      <h3>Pick Your Topping:</h3>
+      <select class="form-control" id="Top">
+      <option>Pepperoni</option>
+      <option>Chicken</option>
+      <option>Mushrooms</option>
+      <option>Olives</option>
+      </select>
+      <br>
+      <center><button type="submit" class="btn btn-success">Bake!</button></center>
+    </form>
+      <br>
+
+      <h2>Your Order:</h2>
+      <hr>
+    <div>
+      <ul id="pizzaOutput">
+
+      </ul>
+    </div>
+
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>
