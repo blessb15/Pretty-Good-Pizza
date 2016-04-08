@@ -1,1 +1,13 @@
+.jumbotron{
+  margin-top: 0px;
+  background: linear-gradient(#c7956b,#ffeab8);
+}
 
+.display{
+  display: none;
+}
+
+body{
+  background-color: #ffeab8;
+  color: #e3571a;
+}

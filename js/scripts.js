@@ -8,16 +8,16 @@ function Pizza(crust,sauce,toppings,Size) {
 
 Pizza.prototype.Order = function() {
   if (this.Size === "Personal"){
-    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust is: " + "$3.00";
+    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust: " + "$3.00";
   }
   if (this.Size === "Small"){
-    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust is: " + "$5.00";
+    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust: " + "$5.00";
   }
   if (this.Size === "Medium"){
-    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust is: " + "$7.00";
+    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust: " + "$7.00";
   }
   if (this.Size === "Large"){
-    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust is: " + "$10.00";
+    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust: " + "$10.00";
   }
 }
 
@@ -30,7 +30,9 @@ var userSize = 0;
 var userName = 0;
 
 
+
 $("#makePizza").submit(function(event){
+  $("div").removeClass("display ");
   event.preventDefault();
   var userCrust = $("#Crust").val();
   var userSauce = $("#Sauce").val();
@@ -38,4 +40,5 @@ $("#makePizza").submit(function(event){
   var userSize = $("#Size").val();
   var newPizza = new Pizza(userCrust,userSauce,userToppings,userSize);
   $("#pizzaOutput").append("<li>" + newPizza.Order().toLowerCase() + "</li>");
+
 });
