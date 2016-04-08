@@ -8,16 +8,16 @@ function Pizza(crust,sauce,toppings,Size) {
 
 Pizza.prototype.Order = function() {
   if (this.Size === "Personal"){
-    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust: " + "$3.00";
+    return this.Size + " pizza on " + this.sauce + " sauce with "  + this.toppings + " and " + this.crust + " crust: " + "$3.00";
   }
   if (this.Size === "Small"){
-    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust: " + "$5.00";
+    return this.Size + " pizza on " + this.sauce + " sauce with "  + this.toppings + " and " + this.crust + " crust: " + "$5.00";
   }
   if (this.Size === "Medium"){
-    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust: " + "$7.00";
+    return this.Size + " pizza on " + this.sauce + " sauce with "  + this.toppings + " and " + this.crust + " crust: " + "$7.00";
   }
   if (this.Size === "Large"){
-    return this.Size + " " + this.toppings + " on " + this.sauce + " sauce with "  + this.crust + " crust: " + "$10.00";
+    return this.Size + " pizza on " + this.sauce + " sauce with "  + this.toppings + " and " + this.crust + " crust: " + "$10.00";
   }
 }
 

@@ -3,11 +3,29 @@
   background: linear-gradient(#c7956b,#ffeab8);
 }
 
-.display{
+.display {
   display: none;
 }
 
-body{
+body {
   background-color: #ffeab8;
   color: #e3571a;
+}
+
+h2.center {
+  text-align: center;
+  font-weight: bold;
+}
+
+#pizzaOutput {
+  font-size: 15px;
+}
+
+.delivery {
+  font-size: 25px;
+}
+
+label {
+  font-size: 25px;
+  font-weight: lighter;
 }
